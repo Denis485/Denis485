@@ -1,0 +1,29 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+struct punct {
+  int x,y;
+  };
+  struct cerc {
+    punct centru;
+    int raza;
+    };
+    cerc C;
+    punct P;
+    void cit(){
+      cin>>C.centru.x;
+      cin>>C.centru.y;
+      cin>>C.raza;
+      cin>>P.x>>P.y;
+      }
+      int main(){
+        cit();
+        float d;
+        d=sqrt(pow((C.centru.x-P.y),2)+pow((C.centru.y-P.y),2));
+        if(d>C.raza)
+        cout<<"exterior";
+        else 
+        if(d<C.raza)
+        cout<<"interior";
+        else cout<<"pe cerc";
+         return 0;}
