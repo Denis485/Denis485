@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+int n;
+struct fractie{
+  int a,b;
+  }F[100];
+  void cit(){
+    int i;
+    cin>>n;
+    for(i=1; i<=n; i++)
+    cin>>F[i].a>>F[i].b;
+    }
+    int cmmdc(int x, int y){
+      while(x!=y)
+      if(x>y)
+      x-=y;
+      else
+      y-=x;
+      return x;
+      }
+      int main() {
+        cit();
+        int d,i,x,y;
+        fractie S;
+        S.a=0;
+        S.b=1;
+        for (i=1; i<=n; i++){
+          x=F[i].a*S.b+F[i].b*S.a;
+          y=F[i].b*S.b;
+          d=cmmdc(x,y);
+          x=x/d;
+          y=y/d;
+          S.a=x;
+          S.b=y;
+          }cout<<S.a<<"/"<<S.b;
+          return 0; }
