@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string.h>
+using  namespace std;
+ struct masina{
+   char firma[100], model[100];
+   int an;
+   }s,t;
+   void citire(){
+     cin.get(s.firma,100);
+     cin.get();
+     cin.get(s.model,100);
+     cin.get();
+     cin>>s.an;
+     cin.get();
+     cin.get(t.firma,100);
+     cin.get();
+     cin.get(t.model,100);
+     cin.get();
+     cin>>t.an;
+     }
+     int main(){
+       citire();
+       if(s.an<t.an)
+       cout<<t.firma<<" "<<t.model<<" "<<t.an;
+       else
+       if (s.an>t.an)
+       cout<<s.firma<<" "<<s.model<<" "<<s.an;
+       else{
+         cout<<t.firma<<" "<<t.model<<" "<<t.an;
+         cout<<endl;
+         cout<<s.firma<<" "<<s.model<<" "<<s.an;
+         }
+         return 0;
+
+         }
